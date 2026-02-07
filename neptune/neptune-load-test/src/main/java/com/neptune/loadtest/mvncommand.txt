@@ -1,0 +1,7 @@
+mvn exec:java -Dexec.mainClass="com.neptune.loadtest.NeptuneLoadTest"
+
+# 編譯打包
+mvn clean package
+
+# 執行
+java -jar target/neptune-load-test-1.0-SNAPSHOT.jar

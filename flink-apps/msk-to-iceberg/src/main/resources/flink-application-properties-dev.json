@@ -1,0 +1,22 @@
+[
+  {
+    "PropertyGroupId": "MskSource",
+    "PropertyMap": {
+      "bootstrap.servers": "your-kafka-broker-1:9096,your-kafka-broker-2:9096,your-kafka-broker-3:9096",
+      "topic": "your-kafka-topic",
+      "group.id": "your-consumer-group",
+      "security.protocol": "SASL_SSL",
+      "sasl.mechanism": "SCRAM-SHA-512",
+      "sasl.jaas.config": "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"your-username\" password=\"your-password\";"
+    }
+  },
+  {
+    "PropertyGroupId": "IcebergSink",
+    "PropertyMap": {
+      "warehouse.path": "s3://your-bucket-name/warehouse/",
+      "database.name": "default",
+      "table.name": "your_table_name",
+      "aws.region": "us-east-1"
+    }
+  }
+]

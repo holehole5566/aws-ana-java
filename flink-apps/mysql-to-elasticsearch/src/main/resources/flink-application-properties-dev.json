@@ -1,0 +1,39 @@
+[
+  {
+    "PropertyGroupId": "ApplicationConfig",
+    "PropertyMap": {
+      "parallelism": "4",
+      "checkpoint.interval.ms": "5000",
+      "operator.chaining": "false"
+    }
+  },
+  {
+    "PropertyGroupId": "MysqlSource",
+    "PropertyMap": {
+      "hostname": "your-mysql-host.rds.amazonaws.com",
+      "port": "3306",
+      "username": "your-username",
+      "password": "your-password",
+      "database.name": "your-database",
+      "table.name": "your-table",
+      "server.timezone": "UTC",
+      "server.id": "1000000-2000000",
+      "chunk.size": "2000",
+      "fetch.size": "2000"
+    }
+  },
+  {
+    "PropertyGroupId": "ElasticsearchSink",
+    "PropertyMap": {
+      "hosts": "https://your-elasticsearch-endpoint.es.amazonaws.com:443",
+      "username": "your-username",
+      "password": "your-password",
+      "index": "your-index-name",
+      "bulk.flush.max.actions": "1000",
+      "bulk.flush.interval": "1s",
+      "bulk.flush.max.size": "5mb",
+      "bulk.flush.max.retries": "20",
+      "bulk.flush.backoff.delay": "500ms"
+    }
+  }
+]
