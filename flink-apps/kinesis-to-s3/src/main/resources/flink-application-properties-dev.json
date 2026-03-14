@@ -1,0 +1,18 @@
+[
+  {
+    "PropertyGroupId": "KinesisSource",
+    "PropertyMap": {
+      "stream.name": "test0310",
+      "aws.region": "us-east-1",
+      "aws.account.id": "YOUR_ACCOUNT_ID",
+      "start.position": "LATEST",
+      "start.timestamp": "2026-03-10T00:00:00Z"
+    }
+  },
+  {
+    "PropertyGroupId": "S3Sink",
+    "PropertyMap": {
+      "output.path": "s3://flink-sink-poyenc/test0310/"
+    }
+  }
+]
